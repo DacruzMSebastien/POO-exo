@@ -122,7 +122,36 @@ public function age()
     $interval = $date_de_creation->diff($now);
     return $interval->format('%Y années d\'ancienneté');
 }
-
+public function display(){
+		return (' <table>
+					<tr>
+					<th>Marque</th>
+					<th>Modèle</th>
+					<th>Couleur</th>
+					<th>Mise en circu</th>
+					<th>Nombre de KM</th>
+					<th>Usure</th>
+					<th>Poids</th>
+					<th>Pays</th>
+					<th>Status</th>
+					<th>Catégorie</th>
+				  </tr>
+				  <tr>
+				  	<td>'.$this->modele.'</td>
+				  	<td>'.$this->marque.'</td>
+				  	<td>'.$this->couleur.'</td>
+				  	<td>'.$this->dateMiseCircu.'</td>
+				  	<td>'.$this->km.'</td>
+				  	<td>'.$this->usage.'</td>
+				  	<td>'.$this->weight.'</td>
+				  	<td>'.$this->country.'</td>
+				  	<td>'.$this->status.'</td>
+				  	<td>'.$this->categorie.'</td>
+				  	<img src="'.$this->picPath.'" alt="car"/>
+				  </tr>
+				  </table>'
+				  );
+	}
 
 }
 
